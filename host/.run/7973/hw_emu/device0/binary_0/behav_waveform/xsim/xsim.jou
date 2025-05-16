@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# xsim v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:36:09 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Fri May 16 10:34:19 2025
+# Process ID: 8026
+# Current directory: /media/muhammadbilal/E6129CBB129C9263/vitis_kernel_flow_feature_tutorials/my_practice/host/.run/7973/hw_emu/device0/binary_0/behav_waveform/xsim
+# Command line: xsim -log simulate.log -mode tcl -source {xsim.dir/pfm_top_wrapper_behav/xsim_script.tcl}
+# Log file: /media/muhammadbilal/E6129CBB129C9263/vitis_kernel_flow_feature_tutorials/my_practice/host/.run/7973/hw_emu/device0/binary_0/behav_waveform/xsim/simulate.log
+# Journal file: /media/muhammadbilal/E6129CBB129C9263/vitis_kernel_flow_feature_tutorials/my_practice/host/.run/7973/hw_emu/device0/binary_0/behav_waveform/xsim/xsim.jou
+# Running On        :muhammadbilal-OptiPlex-7050
+# Platform          :Ubuntu
+# Operating System  :Ubuntu 22.04.5 LTS
+# Processor Detail  :Intel(R) Core(TM) i7-7700 CPU @ 3.60GHz
+# CPU Frequency     :4099.980 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16626 MB
+# Swap memory       :2147 MB
+# Total Virtual     :18773 MB
+# Available Virtual :15304 MB
+#-----------------------------------------------------------
+source xsim.dir/pfm_top_wrapper_behav/xsim_script.tcl
+source pfm_top_wrapper.tcl
