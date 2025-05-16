@@ -102,6 +102,21 @@ Each output is the input multiplied by 5 (e.g., `input[i] * 5`). Change the Host
 | ...         | ...          |
 | 1023        | 5115         |
 
+
+## Building and Running the Project Automatically
+
+If you want to build everything automatically, use the Makefile commands:
+
+* `make` — builds the project
+* `make run` — builds and runs the project
+* `make clean` — cleans the build files
+
+If you don't want to build the project again, build it once, then test the kernel using this command:
+
+```bash
+./scalar_mult.exe xclbin/fpgabinary.hw_emu.xclbin
+```
+
 ## Acknowledgment
 
 If you use this work in academic research, commercial projects, or any derivative work,  
