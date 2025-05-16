@@ -1,21 +1,18 @@
-Here is a complete README for your project, targeting **Alveo U200** or **U250** acceleration using Vitis. It includes directory structure, build instructions, and example output for your scalar multiplication kernel:
+# Scalar Multiplication FPGA Kernel hw_emu (Alveo U200/U250)
 
----
-
-# Scalar Multiplication FPGA Kernel (Alveo U200/U250)
-
-This project demonstrates a simple dataflow HLS kernel (`scalar_mult`) accelerated on an AMD Alveo U200 or U250 card using the Vitis unified software platform.
+This project demonstrates a simple HLS kernel (`scalar_mult`) accelerated on an AMD Alveo U200 or U250 card using the Vitis unified software platform.
 
 ## 📁 Directory Structure
 
 ```
-my_practice/
+top_dir/
 │
 ├── host/                       # Host-side C++ code (XRT-based)
 │   └── host.cpp                # Loads xclbin, allocates buffers, runs kernel
 │
 ├── src/                        # Kernel source code (C++ HLS)
 │   ├── scalar_mult.cpp         # Main kernel logic
+|   |── scalar_mult_tb.cpp      # HLS Test Bench
 │   └── params.h                # Parameters (e.g., size, scalar factor)
 │
 ├── HLS_build/                  # HLS kernel compilation
@@ -26,23 +23,23 @@ my_practice/
 ├── xclbin/                     # Compiled binary containers
 │   └── fpgabinary.hw_emu.xclbin   # Hardware emulation binary
 │
-├── Makefile                    # (Optional) Build automation
+├── Makefile                    # Build automation
 └── README.md                   # Project documentation
 ```
 
 ## ⚙️ Requirements
 
-* **AMD Alveo U200/U250 card**
-* **Xilinx Vitis 2024.1**
+* **AMD Alveo U200/U250 cards**
+* **Xilinx Vitis 2021.1 or Higher**
 * **Xilinx XRT runtime**
-* **Vivado HLS 2024.1**
+* **Vitis HLS 2021.1 or Higher**
 * Linux-based OS (Ubuntu recommended)
 
 ## 🛠️ Build Instructions
 
 1. **Generate HLS Kernel (.xo)**
 
-   Run the following in the `my_practice` root directory:
+   Run the following in the `your top root Dir` root directory :
 
    ```bash
    vitis_hls -f HLS_build/build.tcl
@@ -86,13 +83,13 @@ Creating kernel handle...
 Input data:
 0 1 2 3 4 5 6 7 8 9 ... 1022 1023 
 
-Kernel finished in 74.5176 ms
-Throughput: 0.104841 MB/s
+Kernel finished in (time) ms
+Throughput: __ MB/s
 Output data:
 0 5 10 15 20 25 30 35 40 45 50 55 60 65 70 75 80 85 90 95 ... 5115
 ```
 
-Each output is the input multiplied by 5 (e.g., `input[i] * 5`).
+Each output is the input multiplied by 5 (e.g., `input[i] * 5`). Change the Host Apllication to generate you own data, this is just an example.
 
 ## ✅ Expected Behavior
 
@@ -105,10 +102,18 @@ Each output is the input multiplied by 5 (e.g., `input[i] * 5`).
 | ...         | ...          |
 | 1023        | 5115         |
 
-## 📞 Contact
+## Acknowledgment
 
-For questions, contact **Muhammad Bilal** or raise issues via GitHub (if this is a repository).
+If you use this work in academic research, commercial projects, or any derivative work,  
+**please give credit to the original author**:
+
+```
+Muhammad Bilal Sajid  
+Email: bilalsajid695@gmail.com  
+GitHub: https://github.com/engrbilal992/YOLOv5s-Ghost-Inference-in-Cpp-from-scratch  
+Contact: +92 314 5844461
+```
+
+Your acknowledgment is genuinely appreciated!
 
 ---
-
-Let me know if you want a Markdown copy of this README or a LaTeX version for documentation.
